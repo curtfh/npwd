@@ -1,8 +1,7 @@
 import { checkHasPhone } from '../cl_main';
-import { IAlertProps } from '../../../typings/alerts';
-import { ActiveCall, CallEvents, CallRejectReasons } from '../../../typings/call';
+import { IAlertProps } from '@typings/alerts';
+import { ActiveCall, CallEvents, CallRejectReasons } from '@typings/call';
 import { Sound } from '../sounds/client-sound.class';
-import KvpService from '../settings/client-kvp.service';
 
 const exp = global.exports;
 
@@ -61,8 +60,8 @@ export class CallService {
     // we don't want to reset our UI if we're in a call already or if we're currently starting a call that hasn't been canceled
     if (this.isInCall() || !this.isCurrentPendingCall(receiver)) return;
     if (this.callSound) this.callSound.stop();
-    this.openCallModal(false);
     this.currentPendingCall = null;
+    this.openCallModal(false);
     CallService.sendCallAction(CallEvents.SET_CALL_INFO, null);
 
     const hangUpSound = new Sound(this.hangUpSoundName, this.hangUpSoundSet);
@@ -116,6 +115,7 @@ export class CallService {
     this.openCallModal(false);
     this.currentPendingCall = null;
 
+    this.openCallModal(false);
     CallService.sendCallAction<null>(CallEvents.SET_CALL_INFO, null);
 
     const hangUpSound = new Sound(this.hangUpSoundName, this.hangUpSoundSet);
