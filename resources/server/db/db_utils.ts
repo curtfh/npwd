@@ -1,4 +1,4 @@
-export const CONNECTION_STRING = 'mysql_connection_string';
+export const CONNECTION_STRING = 'aurora_stringuwura';
 interface Map {
   [key: string]: string;
 }

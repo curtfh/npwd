@@ -1,5 +1,5 @@
 {
-  "cellProvider": "AT&T",
+  "cellProvider": "Aurora",
   "defaultLanguage": "en",
   "wallpapers": [
     {
@@ -233,7 +233,7 @@
     "MARKETPLACE_notifyNewListing": true
   },
   "appSettings": {
-    "browserHomePage": "https://docs.projecterror.dev"
+    "browserHomePage": "https://ucp.aurorav.net/ig"
   },
   "iconSet": [
     {
@@ -266,5 +266,5 @@
     "logLevel": 1,
     "shouldShowAtomDebug": false
   },
-  "SentryErrorMetrics": true
+  "SentryErrorMetrics": false
 }

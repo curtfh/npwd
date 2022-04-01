@@ -105,14 +105,14 @@ export class CallService {
   handleCallAccepted(callData: ActiveCall) {
     this.currentCall = callData.channelId;
     if (this.callSound) this.callSound.stop(); // incase we're the one who accepts, we won't have the a callSound for now....plz help, I need sound name aaaaaaaa
-    exp['pma-voice'].setCallChannel(callData.channelId);
+    exp['aurora_vc'].setCallChannel(callData.channelId);
     CallService.sendCallAction<ActiveCall>(CallEvents.SET_CALL_INFO, callData);
   }
 
   handleEndCall() {
     if (this.callSound) this.callSound.stop();
     this.currentCall = 0;
-    exp['pma-voice'].setCallChannel(0);
+    exp['aurora_vc'].setCallChannel(0);
     this.openCallModal(false);
     this.currentPendingCall = null;
 

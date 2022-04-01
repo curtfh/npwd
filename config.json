@@ -5,26 +5,44 @@
     "exportFunction": "myCheckerFunction"
   },
   "general": {
-    "useResourceIntegration": false,
-    "toggleKey": "f1",
+    "useResourceIntegration": true,
+    "toggleKey": "f3",
     "toggleCommand": "phone",
     "defaultLanguage": "en"
   },
   "profanityFilter": {
-    "enabled": false,
-    "badWords": ["esx"]
+    "enabled": true,
+    "badWords": [
+      "tangina",
+      "bobo",
+      "idiot",
+      "fuck",
+      "fucking",
+      "nigga",
+      "pukunan",
+      "pikunin",
+      "tanga"
+    ]
   },
   "database": {
-    "useIdentifierPrefix": false,
+    "useIdentifierPrefix": true,
     "playerTable": "users",
     "identifierColumn": "identifier",
-    "identifierType": "license",
+    "identifierType": "steam",
     "profileQueries": true,
-    "phoneNumberColumn": "phone_number"
+    "phoneNumberColumn": "phone"
+  },
+  "images": {
+    "url": "https://api.imgur.com/3/image",
+    "type": "imgur",
+    "contentType": "multipart/form-data",
+    "authorizationPrefix": "Client-ID",
+    "useAuthorization": true,
+    "returnedDataIndexes": ["data", "link"]
   },
   "debug": {
     "level": "error",
-    "enabled": true,
-    "sentryEnabled": true
+    "enabled": false,
+    "sentryEnabled": false
   }
 }

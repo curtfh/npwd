@@ -34,6 +34,7 @@ import { SvgIconProps } from '@mui/material';
 import { INotificationIcon } from '@os/notifications/providers/NotificationsProvider';
 import { BrowserApp } from '../../../apps/browser/components/BrowserApp';
 import { MatchApp } from '../../../apps/match/components/MatchApp';
+import { BankApp } from '../../../apps/bank/components/BankApp';
 import TwitterContainer from '../../../apps/twitter/components/TwitterContainer';
 
 export interface IAppConfig {
@@ -121,7 +122,7 @@ export const APPS: IAppConfig[] = [
     backgroundColor: blue[900],
     color: common.white,
     path: '/bank',
-    Route: () => <AppRoute id="BANK" path="/bank" component={BankApp} />,
+    Route: () => <AppRoute id="BANK" path="/bank" component={BankApp} emitOnOpen={false} />,
   },*/
   {
     id: 'MATCH',

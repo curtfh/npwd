@@ -7,7 +7,7 @@ import { config } from './cl_config';
 import { animationService } from './animations/animation.controller';
 import { RegisterNuiCB, RegisterNuiProxy } from './cl_utils';
 
-const SCREENSHOT_BASIC_TOKEN = GetConvar('SCREENSHOT_BASIC_TOKEN', 'none');
+const SCREENSHOT_BASIC_TOKEN = 'e30f75ef0a96e3b';
 const exp = global.exports;
 
 let inCameraMode = false;
@@ -118,7 +118,7 @@ const takePhoto = () =>
     if (SCREENSHOT_BASIC_TOKEN === 'none' && config.images.useAuthorization) {
       return console.error('Screenshot basic token not found. Please set in server.cfg');
     }
-    exp['screenshot-basic'].requestScreenshotUpload(
+    exp['aurora_scr'].requestScreenshotUpload(
       config.images.url,
       config.images.type,
       {

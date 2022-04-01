@@ -19,8 +19,9 @@ const genNumber = (length: number): string => {
 };
 
 const generateUsNumber = (): string => {
-  const rawNumber = genNumber(10);
-  return rawNumber.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+  //const rawNumber = genNumber(10);
+  return '0' + genNumber(9);
+  //return rawNumber.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
 };
 
 /**/
