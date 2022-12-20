@@ -5,6 +5,7 @@ export interface Message {
   author: string;
   is_embed?: boolean;
   embed?: any;
+  createdAt: number;
 }
 
 export interface PreDBMessage {
@@ -119,18 +120,13 @@ export interface OnMessageExportCtx {
   data: PreDBMessage;
 
   source: number;
-
-  /**
-   * Reponds with a message to the source
-   * @param message
-   */
-  respond: (ctx: any, message: string) => void;
 }
 
 export interface EmitMessageExportCtx {
   senderNumber: string;
   targetNumber: string;
   message: string;
+  embed?: any;
 }
 
 export enum MessageEvents {
@@ -154,4 +150,11 @@ export enum MessageEvents {
   CREATE_MESSAGE_BROADCAST = 'npwd:createMessagesBroadcast',
   SET_MESSAGE_READ = 'npwd:setReadMessages',
   DELETE_CONVERSATION = 'nwpd:deleteConversation',
+  GET_MESSAGE_LOCATION = 'npwd:getMessageLocation',
+  MESSAGES_SET_WAYPOINT = 'npwd:setWaypoint',
+}
+
+export interface Location {
+  phoneNumber: string;
+  coords: number[];
 }

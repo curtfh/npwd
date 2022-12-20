@@ -4,6 +4,11 @@
     "exportResource": "aurora_npwd",
     "exportFunction": "doesClientHavePhone"
   },
+  "customPhoneNumber": {
+    "enabled": true,
+    "exportResource": "aurora_npwd",
+    "exportFunction": "generateNumber"
+  },
   "general": {
     "useResourceIntegration": true,
     "toggleKey": "f3",
@@ -33,16 +38,43 @@
     "phoneNumberColumn": "phone"
   },
   "images": {
-    "url": "https://api.imgur.com/3/image",
-    "type": "imgur",
+    "url": "https://aurorahub.gg/rpp/imgs/upload.php",
+    "type": "pe_image",
     "contentType": "multipart/form-data",
-    "authorizationPrefix": "Client-ID",
-    "useAuthorization": true,
-    "returnedDataIndexes": ["data", "link"]
+    "useAuthorization": false,
+    "returnedDataIndexes": ["url"]
+  },
+  "imageSafety": {
+    "filterUnsafeImageUrls": true,
+    "embedUnsafeImages": false,
+    "embedUrl": "https://i.example.com/embed",
+    "safeImageUrls": [
+      "i.imgur.com",
+      "i.file.glass",
+      "dropbox.com",
+      "c.tenor.com",
+      "discord.com",
+      "cdn.discordapp.com",
+      "media.discordapp.com",
+      "upload.wikipedia.org",
+      "i.projecterror.dev",
+      "aurorahub.gg",
+      "cdn.aurorahub.gg",
+      "aurorav.net"
+    ]
   },
   "debug": {
     "level": "error",
-    "enabled": false,
+    "enabled": true,
     "sentryEnabled": false
+  },
+  "defaultContacts": [],
+  "disabledApps": [],
+  "apps": ["pefcl"],
+  "voiceMessage": {
+    "enabled": true,
+    "authorizationHeader": "PE-Secret",
+    "url": "https://aurorahub.gg/rpp/imgs/upload.php",
+    "returnedDataIndexes": ["url"]
   }
 }

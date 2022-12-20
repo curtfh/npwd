@@ -4,11 +4,17 @@
     "exportResource": "my-core-resource",
     "exportFunction": "myCheckerFunction"
   },
+  "customPhoneNumber": {
+    "enabled": false,
+    "exportResource": "number-generator-resource",
+    "exportFunction": "generateNumber"
+  },
   "general": {
     "useResourceIntegration": true,
     "toggleKey": "f1",
     "toggleCommand": "phone",
-    "defaultLanguage": "en"
+    "defaultLanguage": "en",
+    "showId": false
   },
   "database": {
     "useIdentifierPrefix": false,
@@ -19,26 +25,31 @@
     "phoneNumberColumn": "phone_number"
   },
   "images": {
-    "url": "https://api.imgur.com/3/image",
-    "type": "imgur",
-    "imageEncoding": "jpg",
+    "url": "https://api.projecterror.dev/image",
+    "type": "pe_image",
+    "imageEncoding": "webp",
     "contentType": "multipart/form-data",
-    "authorizationPrefix": "Client-ID",
+    "useContentType": false,
+    "useWebhook": false,
+    "authorizationHeader": "PE-Secret",
+    "authorizationPrefix": "",
     "useAuthorization": true,
-    "returnedDataIndexes": ["data", "link"]
+    "returnedDataIndexes": ["url"]
   },
   "imageSafety": {
     "filterUnsafeImageUrls": true,
     "embedUnsafeImages": false,
     "embedUrl": "https://i.example.com/embed",
     "safeImageUrls": [
-      "imgur.com",
-      "file.glass",
+      "i.imgur.com",
+      "i.file.glass",
       "dropbox.com",
-      "tenor.com",
+      "c.tenor.com",
       "discord.com",
-      "discordapp.com",
-      "wikipedia.org"
+      "cdn.discordapp.com",
+      "media.discordapp.com",
+      "upload.wikipedia.org",
+      "i.projecterror.dev"
     ]
   },
   "profanityFilter": {
@@ -63,9 +74,21 @@
     "generateProfileNameFromUsers": true,
     "allowEditableProfileName": true
   },
+  "marketplace": {
+    "persistListings": false
+  },
   "debug": {
     "level": "error",
     "enabled": true,
     "sentryEnabled": true
+  },
+  "defaultContacts": [],
+  "disabledApps": [],
+  "apps": [],
+  "voiceMessage": {
+    "enabled": false,
+    "authorizationHeader": "PE-Secret",
+    "url": "",
+    "returnedDataIndexes": ["url"]
   }
 }

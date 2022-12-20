@@ -17,6 +17,7 @@ export interface Tweet extends NewTweet {
   isReported: boolean;
   avatar_url: string;
   isRetweet: number | boolean;
+  likes: number;
   isRetweetedByPlayer?: boolean;
   retweetIdentifier: string;
   retweetId: string;
@@ -35,7 +36,7 @@ export interface FormattedTweet extends Omit<Tweet, 'images'> {
   images: Image[];
 }
 
-export interface Profile {
+export interface TwitterProfile {
   id: number;
   profile_name: string;
   identifier: string;
