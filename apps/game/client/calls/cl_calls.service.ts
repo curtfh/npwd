@@ -120,14 +120,14 @@ export class CallService {
     this.currentCall = callData.channelId;
     if (this.callSound) this.callSound.stop();
     if (Ringtone.isPlaying()) this.ringtone.stop();
-    exp['pma-voice'].setCallChannel(callData.channelId);
+    exp['aurora_voice'].setCallChannel(callData.channelId);
     CallService.sendCallAction<ActiveCall>(CallEvents.SET_CALL_INFO, callData);
   }
 
   handleEndCall() {
     if (this.callSound) this.callSound.stop();
     this.currentCall = 0;
-    exp['pma-voice'].setCallChannel(0);
+    exp['aurora_voice'].setCallChannel(0);
     this.currentPendingCall = null;
 
     this.openCallModal(false);
@@ -139,9 +139,9 @@ export class CallService {
 
   handleMute(state: boolean, callData: ActiveCall) {
     if (state) {
-      exp['pma-voice'].setCallChannel(0);
+      exp['aurora_voice'].setCallChannel(0);
     } else {
-      exp['pma-voice'].setCallChannel(callData.channelId);
+      exp['aurora_voice'].setCallChannel(callData.channelId);
     }
   }
 

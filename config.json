@@ -70,7 +70,7 @@
   },
   "defaultContacts": [],
   "disabledApps": [],
-  "apps": ["pefcl"],
+  "apps": [],
   "voiceMessage": {
     "enabled": true,
     "authorizationHeader": "PE-Secret",
