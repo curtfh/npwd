@@ -27,7 +27,7 @@ class _PhotoService {
     resp: PromiseEventResp<GalleryPhoto>,
   ): Promise<void> {
     try {
-      exp['aurora_scr'].requestClientScreenshot(
+      exp['screenshot-basic'].requestClientScreenshot(
         reqObj.source,
         {
           encoding: config.images.imageEncoding,
