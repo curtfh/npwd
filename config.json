@@ -13,21 +13,8 @@
     "useResourceIntegration": true,
     "toggleKey": "f3",
     "toggleCommand": "phone",
-    "defaultLanguage": "en"
-  },
-  "profanityFilter": {
-    "enabled": true,
-    "badWords": [
-      "tangina",
-      "bobo",
-      "idiot",
-      "fuck",
-      "fucking",
-      "nigga",
-      "pukunan",
-      "pikunin",
-      "tanga"
-    ]
+    "defaultLanguage": "en",
+    "showId": false
   },
   "database": {
     "useIdentifierPrefix": true,
@@ -40,7 +27,12 @@
   "images": {
     "url": "https://aurorahub.gg/rpp/imgs/upload.php",
     "type": "pe_image",
+    "imageEncoding": "webp",
     "contentType": "multipart/form-data",
+    "useContentType": false,
+    "useWebhook": false,
+    "authorizationHeader": "PE-Secret",
+    "authorizationPrefix": "",
     "useAuthorization": false,
     "returnedDataIndexes": ["url"]
   },
@@ -62,6 +54,39 @@
       "cdn.aurorahub.gg",
       "aurorav.net"
     ]
+  },
+  "profanityFilter": {
+    "enabled": true,
+    "badWords": ["tangina",
+    "bobo",
+    "idiot",
+    "fuck",
+    "fucking",
+    "nigga",
+    "pukunan",
+    "pikunin",
+    "tanga"]
+  },
+  "twitter": {
+    "showNotifications": true,
+    "generateProfileNameFromUsers": true,
+    "allowEditableProfileName": true,
+    "allowDeleteTweets": true,
+    "allowReportTweets": true,
+    "allowRetweet": true,
+    "characterLimit": 160,
+    "newLineLimit": 10,
+    "enableAvatars": true,
+    "enableEmojis": true,
+    "enableImages": true,
+    "maxImages": 5
+  },
+  "match": {
+    "generateProfileNameFromUsers": true,
+    "allowEditableProfileName": true
+  },
+  "marketplace": {
+    "persistListings": false
   },
   "debug": {
     "level": "error",
