@@ -86,7 +86,7 @@
     "allowEditableProfileName": true
   },
   "marketplace": {
-    "persistListings": false
+    "persistListings": true
   },
   "debug": {
     "level": "error",
