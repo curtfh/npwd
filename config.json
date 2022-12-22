@@ -99,7 +99,7 @@
   "voiceMessage": {
     "enabled": false,
     "authorizationHeader": "PE-Secret",
-    "url": "https://player-data.aurorav.net/audio",
+    "url": "",
     "returnedDataIndexes": ["url"]
   }
 }
