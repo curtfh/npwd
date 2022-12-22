@@ -25,16 +25,16 @@
     "phoneNumberColumn": "phone"
   },
   "images": {
-    "url": "https://aurorahub.gg/rpp/imgs/upload.php",
-    "type": "pe_image",
-    "imageEncoding": "webp",
+    "url": "https://api.imgur.com/3/image",
+    "type": "imgur",
+    "imageEncoding": "png",
     "contentType": "multipart/form-data",
-    "useContentType": false,
+    "useContentType": true,
     "useWebhook": false,
-    "authorizationHeader": "PE-Secret",
-    "authorizationPrefix": "",
-    "useAuthorization": false,
-    "returnedDataIndexes": ["url"]
+    "authorizationHeader": "Authorization",
+    "authorizationPrefix": "Client-ID",
+    "useAuthorization": true,
+    "returnedDataIndexes": ["data", "link"]
   },
   "imageSafety": {
     "filterUnsafeImageUrls": true,
@@ -97,9 +97,9 @@
   "disabledApps": [],
   "apps": [],
   "voiceMessage": {
-    "enabled": true,
+    "enabled": false,
     "authorizationHeader": "PE-Secret",
-    "url": "https://aurorahub.gg/rpp/imgs/upload.php",
+    "url": "https://player-data.aurorav.net/audio",
     "returnedDataIndexes": ["url"]
   }
 }
